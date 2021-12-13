@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Soal 4</title>
+        <meta name =”author” content="Nicholas_Christopher_Rudy 2172020">
+    </head>
+    <style>
+        .circle {            
+            background-color: red;
+            border: 1px solid;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            position: fixed;
+        }
+    </style>
+    <body>
+        <span id="circle" class="circle"></span>
+        <script>
+       let circle = document.getElementById("circle");
+       document.addEventListener('mousemove', 
+       function(p){
+         let h = p.clientX-12; //horizontal
+         let v = p.clientY-8; //vertikal
+         circle.style.left = h + "px";
+         circle.style.top = v + "px";})
+        </script>
+    </body>
+    </html>
+</html>

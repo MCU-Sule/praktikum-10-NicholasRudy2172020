@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Soal 1</title>
+        <meta name =”author” content="Nicholas_Christopher_Rudy 2172020">
+    </head>
+    <style>
+        #penjumlahan {
+            background-color: sandybrown;
+            width: 100%;
+            height: 35px;
+            font-size: 30px;
+        }
+        #pengurangan {
+            background-color:deepskyblue;
+            width: 100%;
+            height: 35px;
+            font-size: 30px;
+        }
+        #perkalian {
+            background-color:rgb(241, 0, 201);
+            width: 100%;
+            height: 35px;
+            font-size: 30px;
+        }
+        #bilangan {
+            background-color:rgb(226, 92, 59);
+            width: 100%;
+            height: 35px;
+            font-size: 30px;
+        }
+        .hitung{
+            height: 20px;
+            background-color:paleturquoise;
+        }
+        .rbutton {
+            background-color:rgb(38, 206, 38);
+            width: 70px;
+            height: 30px;
+        }
+        input{
+            border: solid 1px;
+        }
+    </style>
+    <body>
+        <div id="penjumlahan"><b>Penjumlahan</b></div>
+        <br>
+        <input type="number" disabled id="a1"> + <input type="number" disabled id="a2"> = <input type="number" id="p3"> <button class="hitung" id= "hitung1"onclick ="pertambahan();">Hitung</button><br><br>
+        <button class="rbutton" id="rbutton1" onclick="random();">Random</button> <div id="check"></div><br>
+        <div id="pengurangan"><b>Pengurangan</b></div>
+        <br>
+        <input type="number" disabled id="b1"> - <input type="number" disabled id="b2"> = <input type="number"  id="m3"> <button class="hitung" id= "hitung2" onclick="pengurangan();">Hitung</button><br><br>
+        <button class="rbutton" id="rbutton2" onclick="rkurang();">Random</button><div id="check2"></div><br>
+        <div id="perkalian"><b>Perkalian</b></div>
+        <br>
+        <input type="number" disabled id="c1"> * <input type="number" disabled id="c2"> = <input type="number"  id="x3"> <button class="hitung" id= "hitung3" onclick="perkalian()">Hitung</button><br><br>
+        <button class="rbutton" id="rbutton3" onclick="rkali();">Random</button><div id="check3"></div><br>
+        <div id="bilangan"><b>Bilangan</b></div>
+        <br>
+        <input type="text" disabled id="d1"> = <input type="text" id="d2"> + <input type="text"  id="d3"> + <input type="text"  id="d4"><button class="hitung" id= "hitung4"onclick="hasilbil();">Hitung</button><br><br>
+        <button class="rbutton" id="rbutton4" onclick="rbilangan();">Random</button><div id="check4"></div>
+        <script>
+            var rt1, rt2
+            function random (){
+                rt1 = Math.floor(Math.random()*999)+100;
+                rt2 = Math.floor(Math.random()*999)+100;
+                document.getElementById("a1").value = rt1
+                document.getElementById("a2").value = rt2
+                return rt1;return rt2;
+            }
+            function pertambahan (){
+                let hasiltambah = r1 + r2
+                let jawaban = document.getElementById("p3").value;
+                if (hasiltambah == jawaban){
+                    document.getElementById("check").innerHTML= "Jawaban benar";
+                }
+                else {
+                    document.getElementById("check").innerHTML= "Jawaban salah"
+                }
+            }
+            var rk1,rk2
+            function rkurang (){
+                rk1 = Math.floor(Math.random()*999)+100;
+                rk2 = Math.floor(Math.random()*999)+100;
+                document.getElementById("b1").value = rk1
+                document.getElementById("b2").value = rk2
+                return rk1;return rk2;
+            }
+            function pengurangan (){
+                let hasilpengurangan = random3 - random4
+                let jawaban = document.getElementById("m3").value;
+                if (hasilpengurangan == jawaban){
+                    document.getElementById("check2").innerHTML= "Jawaban benar";
+                }
+                else {
+                    document.getElementById("check2").innerHTML= "Jawaban salah"
+                } 
+            }
+            var rx1, rx2
+            function rkali (){
+                rx1 = Math.floor(Math.random()*100);
+                rx2 = Math.floor(Math.random()*100);
+                document.getElementById("c1").value = rx1
+                document.getElementById("c2").value = rx2
+                return rx1;return rx2;
+            }
+            function perkalian (){
+                let hasilperkalian = random5 * random6
+                let jawaban = document.getElementById("x3").value;
+                if (hasilperkalian == jawaban){
+                    document.getElementById("check3").innerHTML= "Jawaban benar";
+                }
+                else {
+                    document.getElementById("check3").innerHTML= "Jawaban salah"
+                } 
+            }
+            var rb
+            function rbilangan() {
+                rb= Math.floor(Math.random()*999)+1;
+                document.getElementById("d1").value = rb;
+            }
+            function hasilbil() {
+                let hasil1 = document.getElementById("d2").value;
+                let hasil2 = document.getElementById("d3").value;
+                let hasil3 = document.getElementById("d4").value;
+                let hasilb = hasil1 + hasil2 + hasil3
+                if (hasilb==rb){
+                    document.getElementById("check4").innerHTML= "Jawaban benar";
+                }   
+                else {
+                    document.getElementById("check4").innerHTML= "Jawaban salah"
+                }}
+        </script>
+    </body>
+    </html>
